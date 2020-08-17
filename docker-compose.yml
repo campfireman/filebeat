@@ -3,8 +3,8 @@ services:
   filebeat:
     image: elastic/filebeat:${FILEBEAT_VERSION}
     environment:
-      - LOG_TARGET_HOST: "${LOG_TARGET_HOST}"
-      - LOG_TARGET_PORT: "${LOG_TARGET_PORT}"
+      LOG_TARGET_HOST: ${LOG_TARGET_HOST}
+      LOG_TARGET_PORT: ${LOG_TARGET_PORT}
     volumes:
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
       - /var/lib/docker/containers:/usr/share/dockerlogs/data:ro
