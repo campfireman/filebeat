@@ -1,6 +1,6 @@
 ARG FILEBEAT_VERSION
 
-FROM elastic/filebeat:${FILEBEAT_VERSION}
+FROM docker.elastic.co/beats/filebeat:${FILEBEAT_VERSION}
 
 COPY filebeat.yml /usr/share/filebeat/filebeat.yml
 USER root
