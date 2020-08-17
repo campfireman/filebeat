@@ -19,7 +19,7 @@ filebeat.config.modules:
 
 # setup filebeat to send output to logstash
 output.logstash:
-  hosts: [${LOG_TARGET_HOST}:${LOG_TARGET_PORT}]
+  hosts: ["${LOG_TARGET_HOST}:${LOG_TARGET_PORT}"]
 
 # Write Filebeat own logs only to file to avoid catching them with itself in docker log files
 logging.level: error
