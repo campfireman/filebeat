@@ -1,7 +1,9 @@
 version: "3"
 services:
   filebeat:
-    build: ./
+    build:
+      context: ./
+      args: ${FILEBEAT_VERSION}
     image: filebeat
     environment:
       LOG_TARGET_HOST: ${LOG_TARGET_HOST}
