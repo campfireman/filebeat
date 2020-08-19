@@ -2,7 +2,7 @@ filebeat.inputs:
   - type: docker
     containers:
       path: "/usr/share/dockerlogs/data"
-      stream: "stdout"
+      stream: "all"
       ids:
         - "*"
       cri.parse_flags: true
